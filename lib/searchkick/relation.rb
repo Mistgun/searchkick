@@ -14,7 +14,7 @@ module Searchkick
       RUBY_RESERVED_KEYWORDS + DELEGATION_RESERVED_KEYWORDS
     ).freeze
     
-    def delegate_missing_to(target, allow_nil: nil)
+    def self.delegate_missing_to(target, allow_nil: nil)
       target = target.to_s
       target = "self.#{target}" if DELEGATION_RESERVED_METHOD_NAMES.include?(target)
 
