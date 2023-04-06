@@ -78,7 +78,7 @@ module Searchkick
           # note: we could probably just call klass.current_scope = nil
           # anywhere in reindex method (after initial all call),
           # but this is more cautious
-          previous_scope = klass.current_scope(true)
+          previous_scope = klass.current_scope
           if previous_scope
             begin
               klass.current_scope = nil
